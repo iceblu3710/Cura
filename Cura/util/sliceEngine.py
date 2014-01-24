@@ -26,6 +26,8 @@ def getEngineFilename():
 		return os.path.abspath(os.path.join(os.path.dirname(__file__), '../..', 'CuraEngine.exe'))
 	if hasattr(sys, 'frozen'):
 		return os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../../..', 'CuraEngine'))
+	if os.path.abspath('./CuraEngine'):
+		return './CuraEngine'
 	if os.path.isfile('/usr/bin/CuraEngine'):
 		return '/usr/bin/CuraEngine'
 	if os.path.isfile('/usr/local/bin/CuraEngine'):

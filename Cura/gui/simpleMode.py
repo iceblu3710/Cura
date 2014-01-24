@@ -96,6 +96,8 @@ class simpleModePanel(wx.Panel):
 			put('layer_height', '0.20')
 			put('fill_density', '10')
 			put('print_speed', '60')
+			put('wallOuter_speed', '60')
+			put('wallInner_speed', '60')
 			put('cool_min_layer_time', '3')
 			put('bottom_layer_speed', '30')
 		elif self.printTypeHigh.GetValue():

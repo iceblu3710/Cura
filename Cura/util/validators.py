@@ -129,7 +129,9 @@ class printSpeedValidator(object):
 			nozzleSize = profile.getProfileSettingFloat('nozzle_size')
 			layerHeight = profile.getProfileSettingFloat('layer_height')
 			printSpeed = profile.getProfileSettingFloat('print_speed')
-			
+			wallOuterSpeed = profile.getProfileSettingFloat('wallOuter_speed')
+			wallInnerSpeed = profile.getProfileSettingFloat('wallInner_speed')
+
 			printVolumePerMM = layerHeight * nozzleSize
 			printVolumePerSecond = printVolumePerMM * printSpeed
 			#Using 10mm3 per second with a 0.4mm nozzle (normal max according to Joergen Geerds)

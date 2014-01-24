@@ -32,6 +32,8 @@ def getEngineFilename():
 		return '/usr/bin/CuraEngine'
 	if os.path.isfile('/usr/local/bin/CuraEngine'):
 		return '/usr/local/bin/CuraEngine'
+	if os.path.isfile('/usr/share/cura/CuraEngine'):
+		return '/usr/share/cura/CuraEngine'
 	return os.path.abspath(os.path.join(os.path.dirname(__file__), '../..', 'CuraEngine'))
 
 def getTempFilename():

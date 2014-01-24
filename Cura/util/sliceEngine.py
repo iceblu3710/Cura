@@ -16,6 +16,9 @@ import hashlib
 from Cura.util import profile
 from Cura.util import version
 
+import logging
+logging.basicConfig(filename='./cura.log', format='%(message)s', filemode='w', level=logging.INFO)
+
 def getEngineFilename():
 	if platform.system() == 'Windows':
 		if version.isDevVersion() and os.path.exists('C:/Software/Cura_SteamEngine/_bin/Release/Cura_SteamEngine.exe'):
@@ -362,6 +365,7 @@ class Slicer(object):
 		return settings
 
 	def _runSliceProcess(self, cmdList):
+		logging.info(cmdList)
 		kwargs = {}
 		if subprocess.mswindows:
 			su = subprocess.STARTUPINFO()
